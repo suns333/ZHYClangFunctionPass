@@ -30,7 +30,20 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'ZHYClangFunctionPass/Classes/**/*'
+  # 1. 源文件
+  s.source_files  = "src/*"
+  
+  # 2. 需要保留的文件路径
+  # https://guides.cocoapods.org/syntax/podspec.html#preserve_paths
+  s.preserve_paths = "clang/bin/clang", "clang/lib/MyPlacementPass.dylib", "clang/lib/clang/10.0.0/include/*"
+
+  # 3. 修改 xcode 工程配置文件
+  s.xcconfig = {
+    "OTHER_CFLAGS" => "-Xclang -load -Xclang /Users/ww/Downloads/ZHYClangFunctionPass/clang/lib/MyPlacementPass.dylib", 
+    "COMPILER_INDEX_STORE_ENABLE" => "No",
+    "CC" => "/Users/ww/Downloads/ZHYClangFunctionPass/clang/bin/clang"
+  }
+
   
   # s.resource_bundles = {
   #   'ZHYClangFunctionPass' => ['ZHYClangFunctionPass/Assets/*.png']

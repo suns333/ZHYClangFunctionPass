@@ -1,6 +1,0 @@
-use_frameworks!
-target 'ZHYClangFunctionPass_Tests' do
-  pod 'ZHYClangFunctionPass', :path => '../'
-  
-  
-end
