@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/DoubleWwang/ZHYClangFunctionPass'
+  s.homepage         = 'https://github.com/suns333/ZHYClangFunctionPass'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'DoubleWwang' => 'zhouyang11@58.com' }
+  s.author           = { 'zhouyang11' => 'zhouyang11@58.com' }
   s.source           = { :git => 'https://github.com/suns333/ZHYClangFunctionPass.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
